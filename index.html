@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apartment Subscription | Dream Homes</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f0f4ff, #e9f5ff);
+      color: #333;
+      position: relative;
+    }
+
+    header {
+      background-color: #004080;
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      max-width: 650px;
+      background: #fff;
+      margin: 50px auto;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #004080;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #666;
+      font-size: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 14px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #004080;
+      box-shadow: 0 0 5px rgba(0, 64, 128, 0.3);
+    }
+
+    button {
+      padding: 14px;
+      background-color: #004080;
+      color: #fff;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #003060;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+      background-color: #f0f0f0;
+      margin-top: 60px;
+    }
+
+    /* WhatsApp & Call Icons */
+    .fixed-icons {
+      position: fixed;
+      left: 20px;
+      bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .fixed-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      font-size: 22px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .fixed-icons a.call {
+      background-color: #0a66c2;
+    }
+
+    /* Scroll to Top */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #004080;
+      color: #fff;
+      border: none;
+      padding: 12px 14px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #003060;
+    }
+  </style>
+
+  <script>
+    // Success popup
+    function showPopup() {
+      alert("✅ Thank you for subscribing! We’ll contact you soon.");
+    }
+
+    // Scroll to top button
+    window.onscroll = function () {
+      document.getElementById("scrollTopBtn").style.display = window.scrollY > 100 ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Subscribe for Apartment Updates</h1>
+    <p>Get alerts for our latest properties, offers, and launches!</p>
+  </header>
+
+  <div class="container">
+    <h2>Stay Informed</h2>
+    <p>Fill in the form below to receive regular updates from Dream Homes.</p>
+
+    <form action="https://formsubmit.co/kajalprajapati7451@gmail.com" method="POST" onsubmit="showPopup()">
+  <!-- Hidden FormSubmit settings -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Apartment Subscription">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_autoresponse" value="Thanks for subscribing! We’ll contact you soon.">
+
+  <!-- Form fields -->
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="tel" name="phone" placeholder="Phone Number" required>
+
+  <!-- Apartment Type Dropdown -->
+  <label for="apartmentType" style="font-weight: 500;">Select Apartment Type</label>
+  <select name="apartment_type" id="apartmentType" required style="padding: 14px; border-radius: 8px; font-size: 1rem; border: 1px solid #ccc;">
+    <option value="" disabled selected>Select an option</option>
+    <option value="1 BHK">1 BHK</option>
+    <option value="2 BHK">2 BHK</option>
+    <option value="3 BHK">3 BHK</option>
+    <option value="Penthouse">Penthouse</option>
+    <option value="Studio Apartment">Studio Apartment</option>
+  </select>
+
+  <!-- Optional message -->
+  <textarea name="message" rows="4" placeholder="Tell us what kind of apartment you're looking for (optional)"></textarea>
+
+  <button type="submit">Subscribe Now</button>
+</form>
+
+  <footer>
+    &copy; 2025 Dream Homes. All Rights Reserved.
+  </footer>
+
+  <!-- Floating WhatsApp & Call Icons -->
+  <div class="fixed-icons">
+    <a href="https://wa.me/919999999999" target="_blank" title="Chat on WhatsApp">&#x1F4AC;</a>
+    <a href="tel:+919999999999" class="call" title="Call Now">&#x260E;</a>
+  </div>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+</body>
+</html>
