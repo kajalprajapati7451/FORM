@@ -177,34 +177,31 @@
     <h2>Stay Informed</h2>
     <p>Fill in the form below to receive regular updates from Dream Homes.</p>
 
-    <form action="https://formsubmit.co/kajalprajapati7451@gmail.com" method="POST" onsubmit="showPopup()">
-  <!-- Hidden FormSubmit settings -->
+   <form action="https://formsubmit.co/kajalprajapati7451@gmail.com" method="POST">
+  <!-- Important Hidden Fields -->
+  <input type="hidden" name="_subject" value="New Apartment Inquiry">
   <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="New Apartment Subscription">
   <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_autoresponse" value="Thanks for subscribing! We’ll contact you soon.">
+  <input type="hidden" name="_autoresponse" value="Thanks for subscribing to Dream Homes! We will contact you soon.">
 
-  <!-- Form fields -->
+  <!-- User Inputs -->
   <input type="text" name="name" placeholder="Full Name" required>
   <input type="email" name="email" placeholder="Email Address" required>
   <input type="tel" name="phone" placeholder="Phone Number" required>
-
-  <!-- Apartment Type Dropdown -->
-  <label for="apartmentType" style="font-weight: 500;">Select Apartment Type</label>
-  <select name="apartment_type" id="apartmentType" required style="padding: 14px; border-radius: 8px; font-size: 1rem; border: 1px solid #ccc;">
-    <option value="" disabled selected>Select an option</option>
+  
+  <select name="apartment_type" required>
+    <option value="" disabled selected>Select Apartment Type</option>
     <option value="1 BHK">1 BHK</option>
     <option value="2 BHK">2 BHK</option>
     <option value="3 BHK">3 BHK</option>
     <option value="Penthouse">Penthouse</option>
-    <option value="Studio Apartment">Studio Apartment</option>
   </select>
 
-  <!-- Optional message -->
-  <textarea name="message" rows="4" placeholder="Tell us what kind of apartment you're looking for (optional)"></textarea>
+  <textarea name="message" rows="4" placeholder="Your Message (Optional)"></textarea>
 
   <button type="submit">Subscribe Now</button>
 </form>
+
 
   <footer>
     &copy; 2025 Dream Homes. All Rights Reserved.
